@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuizForge</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Clean Header -->
+  <header class="header">
+    <div class="container header-content">
+      <div class="brand" id="nav-brand-btn" role="button" tabindex="0">
+        <span class="brand-dot"></span>
+        <span>QuizForge</span>
+      </div>
+      <span class="tagline">Trivia on AWS</span>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main">
+    <div class="container">
+      
+      <!-- 1. SETUP VIEW -->
+      <section id="setup-view" class="card">
+        <h1 class="card-title">New Quiz</h1>
+        <p class="card-desc">Select parameters to fetch questions from the trivia bank.</p>
+
+        <div id="setup-error" class="alert" style="display: none;"></div>
+
+        <form id="setup-form">
+          <div class="field">
+            <label class="field-label" for="category-select">Category</label>
+            <select id="category-select" class="select">
+              <option value="any">Any Category</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Difficulty</label>
+            <div class="btn-group">
+              <button type="button" class="btn-choice diff-pill active" data-diff="any">Any</button>
+              <button type="button" class="btn-choice diff-pill" data-diff="easy">Easy</button>
+              <button type="button" class="btn-choice diff-pill" data-diff="medium">Medium</button>
+              <button type="button" class="btn-choice diff-pill" data-diff="hard">Hard</button>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="field-label">Questions</label>
+            <div class="btn-group">
+              <button type="button" class="btn-choice count-pill" data-count="5">5</button>
+              <button type="button" class="btn-choice count-pill active" data-count="10">10</button>
+              <button type="button" class="btn-choice count-pill" data-count="15">15</button>
+            </div>
+          </div>
+
+          <button type="submit" id="start-btn" class="btn-primary">
+            Start Quiz
+          </button>
+        </form>
+      </section>
+
+      <!-- 2. QUIZ VIEW -->
+      <section id="quiz-view" class="card" style="display: none;">
+        <div class="quiz-header">
+          <span id="quiz-category-badge">General</span>
+          <span id="quiz-counter">Question 1 of 10</span>
+        </div>
+
+        <div class="progress-track">
+          <div class="progress-fill" id="quiz-progress-bar" style="width: 10%;"></div>
+        </div>
+
+        <h2 id="quiz-question-text" class="question-title">Question loading...</h2>
+
+        <div id="quiz-options-container" class="options"></div>
+
+        <div class="quiz-footer">
+          <button type="button" class="btn-secondary" id="btn-prev">Previous</button>
+          <div id="quiz-action-container"></div>
+        </div>
+      </section>
+
+      <!-- 3. RESULTS VIEW -->
+      <section id="results-view" class="card" style="display: none;">
+        <div class="result-header">
+          <h1 class="card-title">Results</h1>
+          <div class="score-display">
+            <span class="score-num" id="res-score-num">0</span>
+            <span class="score-total" id="res-score-total">/ 10</span>
+            <span class="score-badge" id="res-score-percent">(0%)</span>
+          </div>
+        </div>
+
+        <div class="review-list" id="res-review-list"></div>
+
+        <button type="button" id="play-again-btn" class="btn-primary">
+          Start Another Quiz
+        </button>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Clean Minimal Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        QuizForge · Questions from <a href="https://opentdb.com/" target="_blank" rel="noopener noreferrer">Open Trivia Database (OpenTDB)</a>
+      </p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

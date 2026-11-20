@@ -1,0 +1,16 @@
+{
+  "TableName": "QuizForge-Sessions",
+  "KeySchema": [
+    {
+      "AttributeName": "quizID",
+      "KeyType": "HASH"
+    }
+  ],
+  "AttributeDefinitions": [
+    {
+      "AttributeName": "quizID",
+      "AttributeType": "S"
+    }
+  ],
+  "BillingMode": "PAY_PER_REQUEST"
+}
