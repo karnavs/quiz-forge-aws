@@ -1,6 +1,6 @@
 # QuizForge ⚡
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-CloudFront%20HTTPS-brightgreen?style=for-the-badge&logo=amazon-aws)](https://d2owlz0hk69nhf.cloudfront.net)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-CloudFront%20HTTPS-brightgreen?style=for-the-badge&logo=amazon-aws)](https://d2ow1z0hk69nhf.cloudfront.net/)
 [![AWS Architecture](https://img.shields.io/badge/AWS-Serverless-orange?style=for-the-badge&logo=amazonaws)](https://aws.amazon.com)
 [![Trivia API](https://img.shields.io/badge/API-OpenTDB-blue?style=for-the-badge)](https://opentdb.com)
 [![License](https://img.shields.io/badge/License-MIT-purple?style=for-the-badge)](LICENSE)
